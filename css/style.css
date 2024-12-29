@@ -29,6 +29,29 @@
 
 }
 
+.light-mode {
+    --primary-color: #f7f7f8;
+    --secondary-color: #000000;
+    --accent-color: #447a96; /* Same as dark mode */
+    --shadow: #29546a; /* Same as dark mode */
+    --top-bottom: #92a9ad;
+    --dark: #b6cccf;
+    --dark-shadow: rgba(200, 200, 200, .5);
+    --second-bg-color: #eff9f7;
+    --home-color: #eff9f7;
+    --third-bg-color: #b0cbc7;
+    --error-bx-color: #ff6b6b;
+    --error-text-color: #e63946;
+    --span-color: linear-gradient(to bottom, #447a96, #29546a 82%); /* Same as dark mode */
+    --toggle-background: #1e1e21;
+    --portfolio-color:#FFFFFF;
+    --prtfolio-top-bottom: #020202;
+    --portfolio-shadow: rgba(21, 21, 23, .8);
+    --link-hover-color: #295451;
+    --education-color:#29546a;
+  }
+
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -56,6 +79,7 @@ body{
 
 
 }
+
 
 section{
     min-height: 50vh;
@@ -142,7 +166,7 @@ section{
 #home {
     position: relative;
     overflow: hidden;
-    height: 100vh; 
+    /* height: 100vh;  */
 }
 
 .home-bg {
@@ -254,11 +278,66 @@ section{
 
 
 }
-
+.navbar {
+    display: flex; /* Ensure items are aligned horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Spread items or adjust based on needs */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  }
+  
 .navbar a:hover,
 .navbar a.active{
     color: var(--accent-color);
 }
+
+
+.checkbox {
+    opacity: 0;
+    height:0;
+    width:0;
+    position: absolute;
+  }
+  
+  .checkbox-label {
+    display: inline-flex;
+    background-color: var(--toggle-background);
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .fa-moon {color: #f1c40f;}
+  
+  .fa-sun {color: #f39c12;}
+  
+  .checkbox-label .ball {
+    background-color: var(--primary-color);
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+  }
+  
+  /* Default state: Ball on the left */
+  .checkbox-label .ball {
+    left: 2px; /* Ball starts on the left */
+    top: 2px;
+    transform: none; /* No translation in default state */
+  }
+  
+  .checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+  }
+  
 
 #menu-icon{
     font-size: 3.6rem;

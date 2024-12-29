@@ -11,8 +11,13 @@
     .home{
         justify-content: center;
         flex-direction: column;
-        height: 100vh;
     }
+    /* @media (min-width: 900px){
+        .home{
+            height: auto;
+        }
+
+     } */
     .home-img img{
         width: 600px;  
         height: auto; 
@@ -161,7 +166,7 @@
 
     .home{
         flex-direction: column;
-        height: 100vh;
+        height: auto; 
     }
 
     .home-img img{
@@ -296,7 +301,7 @@
     }*/
 
     .home{
-        height: 100vh;
+        height: auto;
     }
 
     .contact form .input-box input{
@@ -325,3 +330,8 @@
     }
 }
 
+@media(min-width: 1200px){
+    .home{
+        height: 100vh;
+    }
+}
