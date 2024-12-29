@@ -10,7 +10,6 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
-
 :root{
     
     --primary-color: #1e1e21;
@@ -32,8 +31,8 @@
 .light-mode {
     --primary-color: #f7f7f8;
     --secondary-color: #000000;
-    --accent-color: #447a96; /* Same as dark mode */
-    --shadow: #29546a; /* Same as dark mode */
+    --accent-color: #694dbc; /* Same as dark mode */
+    --shadow: rgba(95, 67, 178, 0.7); /* Same as dark mode */
     --top-bottom: #92a9ad;
     --dark: #b6cccf;
     --dark-shadow: rgba(200, 200, 200, .5);
@@ -42,7 +41,7 @@
     --third-bg-color: #b0cbc7;
     --error-bx-color: #ff6b6b;
     --error-text-color: #e63946;
-    --span-color: linear-gradient(to bottom, #447a96, #29546a 82%); /* Same as dark mode */
+    --span-color: linear-gradient(to bottom, #755bc1, #503995 82%); /* Same as dark mode */
     --toggle-background: #1e1e21;
     --portfolio-color:#FFFFFF;
     --prtfolio-top-bottom: #020202;
