@@ -9,6 +9,8 @@
 
   <!-- box icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
 
   <!-- custom css -->
   <link rel="stylesheet" href="css/style.css" />
@@ -42,6 +44,14 @@
       <a href="#blog">Blog</a>
       <a href="#hobbies">Hobbies</a>
       <a href="#contact">Contact</a>
+      <a>
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="checkbox-label">
+          <div class="ball"></div>
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </label>
+    </a>
     </nav>
   </header>
 
@@ -56,9 +66,14 @@
       <p>I use Statistical Analysis, Machine Learning, and Visualization techniques to extract meaningful insights from raw data. <br>
       <br>
         Following this, I can convert these insights into actionable recommendations for the stakeholders, helping them make data-driven decisions.</p>
-      <a href="#" class="btn"
+      <!--<a href="#" class="btn"
         onclick="window.open('https://drive.google.com/file/d/1-I7JDwfqeovXpsyL0vgNPEJEHZzkbfpT/view?usp=sharing')">My
+        Resume</a> 
+      <a href="documents/Resume.pdf" class="btn" download="Bishal_Singha_CV_2024.pdf" targe="blank">My Resume</a>-->
+      <a href="#" class="btn"
+        onclick="window.open('documents/Resume.pdf')">My
         Resume</a>
+
         <a href="mailto:vishal7801@gmail.com" class="btn">Email Me</a>
 
     </div>
@@ -77,6 +92,29 @@
     <h2 class="portfolio-heading"> Latest <span> Projects</span></h2>
 
     <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img src="images/stock_prediction.png" alt="">
+        <div class="portfolio-layer0">
+          <h4>Predicting US Stocks Closing Movements</h4>
+          <p><strong>Models Used :</strong> XGBoost, LightGBM, and MLP model ensemble</p>
+
+          <div class="layer1">
+            <a href="#"></a>  <!-- Project Report lines-->
+            <a href="https://github.com/BishalSingha/Fake-News-Detection" target="_blank">Source code</a>
+          </div>
+
+          <div class="portfolio-layer">
+            <!--
+            <h4>Fake News Detection</h4>
+            <p>Duration</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+            -->
+            <a href="#"></a>
+            <a href="https://github.com/BishalSingha/Fake-News-Detection" target="_blank">Source code</a>
+          </div>
+        </div>
+      </div>
+
 
       <div class="portfolio-box">
         <img src="images/portfolio1.jpg" alt="">
@@ -85,7 +123,7 @@
           <p><strong>Models Used :</strong> XGBoost, LightGBM, TiDE</p>
 
           <div class="layer1">
-            <a href="#">Project report</a> 
+            <a href="#"></a> 
             <a href="https://github.com/BishalSingha/Store-Sales--A-Study-in-Time-Series" target="_blank">Source code</a>
           </div>
 
@@ -95,7 +133,7 @@
             <p>Duration</p>
             <a href="#"><i class='bx bx-link-external'></i></a>
             -->
-            <a href="#">Project report</a>
+            <a href="#"></a>
             <a href="https://github.com/BishalSingha/Store-Sales--A-Study-in-Time-Series" target="_blank">Source code</a>
           </div>
         </div>
@@ -104,11 +142,11 @@
       <div class="portfolio-box">
         <img src="images/webpage1.jpg" alt="">
         <div class="portfolio-layer0">
-          <h4>Catch Me If You Can</h4>
+          <h4>Intruder Detection through web page tracking</h4>
           <p><strong>Models Used :</strong> LightGBM Ensemble </p>
 
           <div class="layer1">
-            <a href="#">Project report</a>
+            <a href="#"></a>
             <a href="https://github.com/BishalSingha/Catch-Me-If-You-Can" target="_blank">Source code</a>
           </div>
 
@@ -119,8 +157,30 @@
             <a href="#"><i class='bx bx-link-external'></i></a>
             -->
 
-            <a href="#">Project report</a>
+            <a href="#"></a>
             <a href="https://github.com/BishalSingha/Catch-Me-If-You-Can" target="_blank">Source code</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img src="images/flight_delay.jpg" alt="">
+        <div class="portfolio-layer0">
+          <h4>Predicting Flight Delays</h4>
+          <p><strong>Models Used :</strong> CatBoost</p>
+
+          <div class="layer1">
+            <a href="#"></a>
+            <a href="https://github.com/BishalSingha/Predicting-Flight-Delays/tree/main" target="_blank">Source code</a>
+          </div>
+
+          <div class="portfolio-layer">
+            <!--
+            <h4>NYC Taxi Trip Duration</h4>
+            <p>Duration</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+            -->
+            <a href="#"></a>
+            <a href= "https://github.com/BishalSingha/Predicting-Flight-Delays/tree/main" target="_blank">Source code</a>
           </div>
         </div>
       </div>
@@ -132,7 +192,7 @@
           <p><strong>Models Used :</strong> XGBoost, AdaBoost, LightGBM</p>
 
           <div class="layer1">
-            <a href="#">Project report</a>
+            <a href="#"></a>
             <a href="https://github.com/BishalSingha/Predicting-Effective-Arguments" target ="_blank">Source code</a>
           </div>
 
@@ -142,67 +202,24 @@
             <p>Predict Effective Arguments</p>
             <a href="#"><i class='bx bx-link-external'></i></a>
             -->
-            <a href="#">Project report</a>
+            <a href="#"></a>
             <a href="https://github.com/BishalSingha/Predicting-Effective-Arguments" target="_blank">Source code</a>
           </div>
         </div>
       </div>
 
-      <div class="portfolio-box">
-        <img src="images/flight_delay.jpg" alt="">
-        <div class="portfolio-layer0">
-          <h4>Predicting Flight Delays</h4>
-          <p><strong>Models Used :</strong> CatBoost</p>
-
-          <div class="layer1">
-            <a href="#">Project report</a>
-            <a href="https://github.com/BishalSingha/Predicting-Flight-Delays/tree/main" target="_blank">Source code</a>
-          </div>
-
-          <div class="portfolio-layer">
-            <!--
-            <h4>NYC Taxi Trip Duration</h4>
-            <p>Duration</p>
-            <a href="#"><i class='bx bx-link-external'></i></a>
-            -->
-            <a href="#">Project report</a>
-            <a href= "https://github.com/BishalSingha/Predicting-Flight-Delays/tree/main" target="_blank">Source code</a>
-          </div>
-        </div>
-      </div>
+      
+      
 
       <div class="portfolio-box">
-        <img src="images/fake_news.png" alt="">
+        <img src="images/emotion2.jpg" alt="">
         <div class="portfolio-layer0">
-          <h4>Fake News Detection</h4>
-          <p><strong>Models Used :</strong> LR, SVM, XGBoost, AdaBoost</p>
+          <h4>Facial Emotion Recognition</h4>
+          <p><strong>Models Used :</strong> ResNet50, Xception, MobileNet, EfficientNet</p>
 
           <div class="layer1">
-            <a href="#">Project report</a>
-            <a href="https://github.com/BishalSingha/Fake-News-Detection" target="_blank">Source code</a>
-          </div>
-
-          <div class="portfolio-layer">
-            <!--
-            <h4>Fake News Detection</h4>
-            <p>Duration</p>
-            <a href="#"><i class='bx bx-link-external'></i></a>
-            -->
-            <a href="#">Project report</a>
-            <a href="https://github.com/BishalSingha/Fake-News-Detection" target="_blank">Source code</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="portfolio-box">
-        <img src="images/thunderstorm.png" alt="">
-        <div class="portfolio-layer0">
-          <h4>Thunderstorm Prediction</h4>
-          <p><strong>Models Used :</strong> LR, SVM</p>
-
-          <div class="layer1">
-            <a href="#">Project report</a>
-            <a href="https://github.com/BishalSingha/Predicting-Thunderstorm-ove--Ranchi-District" target="_blank">Source code</a>
+            <a href="#"></a>
+            <a href="https://github.com/BishalSingha/Facial-Emotion-Recognition" target="_blank">Source code</a>
           </div>
 
           <div class="portfolio-layer">
@@ -211,8 +228,8 @@
             <p>Duration</p>
             <a href="#"><i class='bx bx-link-external'></i></a>
             -->
-            <a href="#">Project report</a>
-            <a href="https://github.com/BishalSingha/Predicting-Thunderstorm-ove--Ranchi-District" target="_blank">Source code</a>
+            <a href="#"></a>
+            <a href="https://github.com/BishalSingha/Facial-Emotion-Recognition" target="_blank">Source code</a>
           </div>
         </div>
       </div>
