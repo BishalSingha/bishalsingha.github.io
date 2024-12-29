@@ -30,7 +30,7 @@
 
 .light-mode {
     --primary-color: #f7f7f8;
-    --secondary-color: #000000;
+    --secondary-color: #1e1e21;
     --accent-color: #694dbc; /* Same as dark mode */
     --shadow: rgba(95, 67, 178, 0.7); /* Same as dark mode */
     --top-bottom: #020202;
