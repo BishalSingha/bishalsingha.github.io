@@ -8,6 +8,18 @@ menuIcon.onclick = () => {
 
 };
 
+/*============================= Theme change ================================ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    const checkbox = document.getElementById('checkbox');
+    checkbox.checked = false; // Ensure the checkbox starts unchecked
+  });
+  
+  const checkbox = document.getElementById("checkbox")
+  checkbox.addEventListener("change", () => {
+    document.body.classList.toggle("light-mode")
+  })
+
 /*==================== scroll sections active link ====================*/
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
@@ -63,63 +75,83 @@ ScrollReveal().reveal('  .contact form', { origin: 'bottom' });
 
 /*==================== Contact Form to Email====================*/
 
+// Dynamically load external scripts
+function loadScript(src, callback) {
+    const script = document.createElement("script");
+    script.src = src;
+    script.onload = callback;
+    document.head.appendChild(script);
+}
+
+// Load SweetAlert2 and EmailJS SDK
+loadScript("https://cdn.jsdelivr.net/npm/sweetalert2@11", function () {
+    console.log("SweetAlert2 loaded successfully.");
+});
+loadScript("https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js", function () {
+    console.log("EmailJS SDK loaded successfully.");
+    emailjs.init("paopQ6xCEqwK6NMCO"); // Replace with your EmailJS Public Key
+});
+
 const form = document.querySelector('form');
-const fullName = document.getElementById("name");
-const email = document.getElementById("email");
-const subject = document.getElementById("subject");
-const mess = document.getElementById("message");
 
-
+// Function to send an email
 function sendEmail() {
-    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Message: ${mess.value}`;
+    // Collect form input values
+    const fullName = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("message").value;
+
+    // Prepare the template parameters
+    const templateParams = {
+        from_name: fullName,
+        from_email: email,
+        subject: subject,
+        message: message
+    };
 
     // Show loading indicator
     Swal.fire({
         title: "Sending...",
-        allowOutsideClick: false,  // Prevent users from closing the popup
-        onBeforeOpen: () => {
+        allowOutsideClick: false,
+        didOpen: () => {
             Swal.showLoading();
         }
     });
 
-    Email.send({
-        SecureToken: "453aa632-76ca-4970-a856-1aed1c449463",
-        To: 'vx2.718@gmail.com',
-        From: "vx2.718@gmail.com",
-        Subject: subject.value,
-        Body: bodyMessage
-    }).then(
-        message => {
-            if (message === "OK") {
-                // Close the loading indicator popup
-                Swal.close();
+    // Send email using EmailJS
+    emailjs.send("service_yd7yi9g", "template_lhasqe9", templateParams)
+        .then(function (response) {
+            Swal.close(); // Close the loading popup
 
-                // Show success message
-                Swal.fire({
-                    title: "Great Success!",
-                    text: "Your message has been sent successfully!",
-                    icon: "success"
-                });
+            // Show success message
+            Swal.fire({
+                title: "Success!",
+                text: "Your message has been sent successfully!",
+                icon: "success"
+            });
 
-                form.reset();  // Reset the form after successful submission
-            } else {
-                // Handle the case where the email sending fails
-                Swal.fire({
-                    title: "Error",
-                    text: "There was an error sending your message. Please try again later.",
-                    icon: "error"
-                });
-            }
-        }
-    );
+            // Reset the form
+            document.querySelector("form").reset();
+        }, function (error) {
+            Swal.fire({
+                title: "Error",
+                text: "Failed to send your message. Please try again later.",
+                icon: "error"
+            });
+            console.error("Email failed to send:", error);
+        });
 }
 
+
 form.addEventListener('submit', (e) => {
+
     e.preventDefault();
-    checkInput();
+    items = checkInput();
+    [fullName,email,subject,message] = items
 
     if (!fullName.classList.contains("error") && !email.classList.contains("error")
-        && !subject.classList.contains("error") && !mess.classList.contains("error")) {
+        && !subject.classList.contains("error") && !message.classList.contains("error")) {
         sendEmail();
     }
 });
@@ -155,6 +187,7 @@ function checkInput() {
             }
         });
     }
+    return items;
 }
 
 function checkEmail() {
@@ -184,7 +217,7 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     checkInput();
     if (!fullName.classList.contains("error") && !email.classList.contains
-("error") && !subject.classList.contains("error") && 
+("error") && !subject.classList.contains("error") &&
 !mess.classList.contains("error")){
     sendEmail();
 
@@ -193,25 +226,3 @@ form.addEventListener('submit', (e) => {
 }
 
 });*/
-
-
-/*==================== typed js ====================*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
