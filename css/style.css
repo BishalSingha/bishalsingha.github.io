@@ -42,7 +42,6 @@
     --error-bx-color: #ff6b6b;
     --error-text-color: #e63946;
     --span-color: linear-gradient(to bottom, #755bc1, #503995 82%); /* Same as dark mode */
-    --span-color: radial-gradient(circle, white, #755bc1 70%, #503995 100%); /* Same as dark mode */
 
     --toggle-background: #1e1e21;
     --portfolio-color:#FFFFFF;
