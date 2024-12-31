@@ -78,7 +78,9 @@
     .contact textarea::placeholder {
     color: #313136;
 }
-   
+   .field .item{
+    background-color: #aca3dd;
+   }
     .footer{
         background: radial-gradient(circle at center, var(--top-bottom) 0%, var(--dark) 120%);
     }
