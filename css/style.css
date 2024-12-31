@@ -10,6 +10,7 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
+
 :root{
     
     --primary-color: #1e1e21;
@@ -28,17 +29,19 @@
 
 }
 
+
 .light-mode {
     --primary-color: #f7f7f8;
     --secondary-color: #1e1e21;
-    --accent-color: #694dbc; /* Same as dark mode */
+    --accent-color: #7850e6; /* Same as dark mode */
     --shadow: rgba(95, 67, 178, 0.7); /* Same as dark mode */
-    --top-bottom: #020202;
+    --top-bottom: #e1dcf2;
     --dark: #694dbc;
-    --dark-shadow: rgba(211, 143, 250, 0.5);
+    --dark-shadow: rgba(226, 226, 229, 0.5);
     --second-bg-color: #eff9f7;
     --home-color: #e5d4f8;
-    --third-bg-color: #694dbc;
+    --third-bg-color: #755bc1;
+
     --error-bx-color: #ff6b6b;
     --error-text-color: #e63946;
     --span-color: linear-gradient(to bottom, #755bc1, #503995 82%); /* Same as dark mode */
@@ -49,7 +52,37 @@
     --portfolio-shadow: rgba(21, 21, 23, .8);
     --link-hover-color: #694dbc;
     --education-color:#694dbc;
-  }
+
+    .portfolio{
+        /*
+        background: radial-gradient(circle at center, var(--primary-color) 0%, var(--top-bottom) 100%);
+        */
+        background: radial-gradient(circle at center, var(--second-bg-color) 0%, var(--home-color) 100%);
+    
+    }
+
+    .hobbies{
+        /*
+        background: radial-gradient(circle at center, var(--primary-color) 0%, var(--top-bottom) 100%);
+        */
+        background: radial-gradient(circle at center, var(--second-bg-color) 0%, var(--home-color) 100%);
+    
+    }
+
+    .header.sticky {
+        /*border-bottom: .1rem solid regba(0, 0, 0, .2);*/
+        background: radial-gradient(ellipse at center, var(--top-bottom) 0%, var(--dark) 150%);
+    }
+
+    .contact input::placeholder,
+    .contact textarea::placeholder {
+    color: #313136;
+}
+   
+    .footer{
+        background: radial-gradient(circle at center, var(--top-bottom) 0%, var(--dark) 120%);
+    }
+}
 
 
 html{
@@ -312,18 +345,19 @@ section{
     align-items: center;
   }
   
-  .fa-moon {color: #f1c40f;}
+  .fa-moon {color: var(--primary-color);}
   
-  .fa-sun {color: #f39c12;}
+  .fa-sun {color: var(--secondary-color);}
   
   .checkbox-label .ball {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     width: 22px;
     height: 22px;
     position: absolute;
     left: 2px;
     top: 2px;
     border-radius: 50%;
+    box-shadow: inset 0px 5px 10px var(--dark), inset 0px -5px 10px var(--toggle-background);
     transition: transform 0.2s linear;
   }
   
@@ -351,9 +385,11 @@ section{
     /*
     background: radial-gradient(circle at center, var(--primary-color) 0%, var(--top-bottom) 100%);*/
     background: radial-gradient(at top center, var(--second-bg-color) 0%, var(--home-color) 100%);
+
    
     
 }
+
 
 .home{
     display: flex;
@@ -504,6 +540,8 @@ span {
     background: radial-gradient(circle at center, #27272b 0%, #0b0b0c 100%);
 */
 }
+
+
 
 .portfolio-heading{
     text-align: left;
@@ -1024,7 +1062,7 @@ span {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem 9%;
+    padding: .2rem 9%;
     background: radial-gradient(circle at center, var(--dark) 0%, var(--top-bottom) 100%);
     
 }
