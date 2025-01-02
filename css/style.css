@@ -12,7 +12,7 @@
 }
 
 :root{
-    
+
     --primary-color: #1e1e21;
     --secondary-color:#FFFFFF;
     --accent-color:#694dbc;
@@ -58,7 +58,7 @@
         background: radial-gradient(circle at center, var(--primary-color) 0%, var(--top-bottom) 100%);
         */
         background: radial-gradient(circle at center, var(--second-bg-color) 0%, var(--home-color) 100%);
-    
+
     }
 
     .hobbies{
@@ -66,7 +66,7 @@
         background: radial-gradient(circle at center, var(--primary-color) 0%, var(--top-bottom) 100%);
         */
         background: radial-gradient(circle at center, var(--second-bg-color) 0%, var(--home-color) 100%);
-    
+
     }
 
     .header.sticky {
@@ -91,10 +91,10 @@ html{
     font-size: 62.5%;
     overflow-x: hidden;
     background-color: var(--primary-color);
-    
+
     overflow-y: hidden;
     animation: showOverflowY 0.7s ease-in forwards 0.7s;
-    
+
 }
 
 @keyframes showOverflowY {
@@ -138,23 +138,23 @@ section{
     place-items: center;
     z-index: 1000;
     animation: waitAndFadeOut 1.4s ease-in-out forwards;
-    overflow-y: hidden; 
+    overflow-y: hidden;
 }
 
 .loading-content {
     display: grid;
-    grid-template-rows: 1fr auto; 
+    grid-template-rows: 1fr auto;
     gap: 1rem;
     color: var(--secondary-color);
     box-sizing: border-box;
-    text-align: right; 
+    text-align: right;
 }
 
 
 .loading-text {
     font-size: 4rem;
     font-weight: bold;
-    margin: 0; 
+    margin: 0;
     position: absolute;
     bottom: 3rem;
     right: 5rem;
@@ -164,7 +164,7 @@ section{
 .pulse {
     width: 7rem;
     height: 7rem;
-    background-color: var(--accent-color); 
+    background-color: var(--accent-color);
     border-radius: 50%;
     animation: pulse 0.7s ease-in-out infinite;
 }
@@ -220,7 +220,7 @@ section{
 .hobbies,
 .footer {
     position: relative;
-    z-index: 1; 
+    z-index: 1;
     opacity: 0;
     animation: fadeInContent 1s ease-in-out forwards 1.2s;
 }
@@ -319,7 +319,7 @@ section{
     justify-content: space-between; /* Spread items or adjust based on needs */
     flex-wrap: nowrap; /* Prevent wrapping to the next line */
   }
-  
+
 .navbar a:hover,
 .navbar a.active{
     color: var(--accent-color);
@@ -332,7 +332,7 @@ section{
     width:0;
     position: absolute;
   }
-  
+
   .checkbox-label {
     display: inline-flex;
     background-color: var(--toggle-background);
@@ -346,11 +346,11 @@ section{
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .fa-moon {color: var(--primary-color);}
-  
+
   .fa-sun {color: var(--secondary-color);}
-  
+
   .checkbox-label .ball {
     background-color: var(--secondary-color);
     width: 22px;
@@ -362,18 +362,18 @@ section{
     box-shadow: inset 0px 5px 10px var(--dark), inset 0px -5px 10px var(--toggle-background);
     transition: transform 0.2s linear;
   }
-  
+
   /* Default state: Ball on the left */
   .checkbox-label .ball {
     left: 2px; /* Ball starts on the left */
     top: 2px;
     transform: none; /* No translation in default state */
   }
-  
+
   .checkbox:checked + .checkbox-label .ball {
     transform: translateX(24px);
   }
-  
+
 
 #menu-icon{
     font-size: 3.6rem;
@@ -388,8 +388,8 @@ section{
     background: radial-gradient(circle at center, var(--primary-color) 0%, var(--top-bottom) 100%);*/
     background: radial-gradient(at top center, var(--second-bg-color) 0%, var(--home-color) 100%);
 
-   
-    
+
+
 }
 
 
@@ -410,12 +410,24 @@ section{
     height: auto;
 }
 
+/* Default dark mode image */
+.home-img img {
+    content: url('../images/skill2.png'); /* Dark mode image */
+}
+
+/* Light mode image */
+.light-mode .home-img img {
+    content: url('../images/skill2_light_mode.png'); /* Light mode image */
+}
+
+
+
 @keyframes floatImage {
     0%{
         transform: translateY(0);
     }
     50%{
-        transform: translateY(-2.4rem);    
+        transform: translateY(-2.4rem);
     }
     100%{
         transform: translateY(0);
@@ -476,25 +488,25 @@ span {
 .btn {
     display: inline-block;
     padding: 1rem 2.8rem;
-    border: 2px solid var(--accent-color); 
-    background: transparent; 
+    border: 2px solid var(--accent-color);
+    background: transparent;
     border-radius: 4rem;
     box-shadow: 0 0 2rem var(--shadow);
     font-size: 1.6rem;
-    color: var(--accent-color); 
+    color: var(--accent-color);
     letter-spacing: 0.1rem;
     font-weight: 600;
     margin: 3rem 1.5rem 3rem 0;
     transition: .3s ease-in-out;
-    position: relative; 
-    overflow: hidden; 
-    z-index: 1; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 
 }
 
 .btn:hover {
-    color: var(--primary-color); 
-    background: transparent; 
+    color: var(--primary-color);
+    background: transparent;
     box-shadow: none;
     border: .2rem solid transparent; /* Change the border color to transparent on hover */
 
@@ -718,7 +730,7 @@ span {
     box-shadow: 0 0 1rem var(--top-bottom);
     overflow: hidden;
     display: flex;
-    border-radius: 0 3rem 0 0; 
+    border-radius: 0 3rem 0 0;
 
 }
 
@@ -843,7 +855,7 @@ span {
 
 .contact form .input-box input,
 .contact form textarea{
-    
+
     color: var(--secondary-color);
     background: var(--third-bg-color);
     border-radius: .8rem;
@@ -854,7 +866,7 @@ span {
 .contact form .input-box input:focus,
 .contact form textarea:focus {
     outline: none;
-    border: 2px solid var(--shadow); 
+    border: 2px solid var(--shadow);
 }
 
 .field .item{
@@ -873,7 +885,7 @@ span {
 
 .field.error .item{
     outline: none;
-    border: 2px solid var(--error-bx-color); 
+    border: 2px solid var(--error-bx-color);
 }
 
 .contact form textarea{
@@ -926,25 +938,25 @@ span {
 .contact form button {
     display: inline-block;
     padding: 1rem 2.8rem;
-    border: 2px solid var(--accent-color); 
-    background: transparent; 
+    border: 2px solid var(--accent-color);
+    background: transparent;
     border-radius: 4rem;
     box-shadow: 0 0 2rem var(--shadow);
     font-size: 1.6rem;
-    color: var(--accent-color); 
+    color: var(--accent-color);
     letter-spacing: 0.1rem;
     font-weight: 600;
     margin: 2.3rem 1.5rem 2.3rem 0;
     transition: 0.3s ease-in-out;
-    position: relative; 
-    overflow: hidden; 
-    z-index: 1; 
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
 
 }
 
 .contact form button:hover {
-    color: var(--primary-color); 
-    background: transparent; 
+    color: var(--primary-color);
+    background: transparent;
     box-shadow: none;
     cursor: pointer;
     border: .2rem solid transparent; /* Change the border color to transparent on hover */
@@ -973,7 +985,7 @@ span {
 
 .footer-iconTop-wrapper {
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
 }
 
 .footer-iconTop {
@@ -1019,7 +1031,7 @@ span {
     transition: 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 
 }
 .footer-iconTop a::before {
@@ -1066,7 +1078,7 @@ span {
     flex-wrap: wrap;
     padding: .2rem 9%;
     background: radial-gradient(circle at center, var(--dark) 0%, var(--top-bottom) 100%);
-    
+
 }
 
 .footer-text p{
@@ -1125,7 +1137,7 @@ span {
     transition: 0.3s ease-in-out;
     position: relative;
     overflow: hidden;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 
 }
 
@@ -1163,54 +1175,53 @@ span {
 ::-webkit-scrollbar {
     width: 1.2rem;
   }
-  
+
   ::-webkit-scrollbar-track {
     background-color: #333;
   }
-  
+
   ::-webkit-scrollbar-thumb {
     background-color: #c4c4c9;
     border-radius: 7px;
     border: 2px solid #333;
   }
-  
+
   ::-webkit-scrollbar-thumb:hover {
     background-color: #777;
   }
-  
+
   /* Firefox */
   * {
     scrollbar-width: thin;
     scrollbar-color: #c4c4c9 #333;
   }
-  
+
   /* Microsoft Edge */
   *::-ms-scrollbar {
     width: 1.3rem;
   }
-  
+
   *::-ms-scrollbar-track {
     background-color: #333;
   }
-  
+
   *::-ms-scrollbar-thumb {
     background-color: #c4c4c9;
     border-radius: 7px;
     border: 2px solid #333;
   }
-  
+
   *::-ms-scrollbar-thumb:hover {
     background-color: #777;
   }
-  
+
   /* Safari */
   body {
     scrollbar-color: #c4c4c9 #333;
   }
-  
+
   /* Brave */
   :-webkit-any(:root:fullscreen, :root:-webkit-full-screen) {
     scrollbar-width: thin;
     scrollbar-color: #c4c4c9 #333;
   }
-  
